@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <div>
+        <style>
+        * {
+            text-decoration: none;
+            margin: 0px;
+        }
+
+        /* NAVBAR BASE */
+        .nav {
+            background-color: rgb(43, 43, 43);
+            font-family: arial;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* FLEX CONTAINER */
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* LOGO */
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* NAV LINKS */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            z-index: 9999;
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* HAMBURGER (MOBILE ONLY) */
+        .hamburger {
+            display: none;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            /* Nav links hidden */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                right: 20px;
+                top: 80px;
+                background: black;
+                padding: 15px;
+                border-radius: 8px;
+                width: 150px;
+                z-index: 9999;
+            }
+
+            /* Show when toggled */
+            .nav-links.open {
+                display: flex;
+            }
+
+            /* Show hamburger */
+            .hamburger {
+                display: block;
+            }
+        }
+        </style>
+    </div>
+
+    <div>
+        <style>
+            
+       .p-1 {
+            font-size: 50px;
+            font-family: arial;
+            position: relative;
+            max-width: 1300px;
+            font-weight: 800;
+            color: rgb(43, 43, 43);
+            display: block;
+            margin-top: 35px;
+       }
+
+       .div-1 {
+               font-family: bold;
+               font-size: 33px;
+               margin-top: 0px;
+               padding-bottom: 10px;
+               text-align: center;
+               display: flex;
+               justify-content: center;
+       }
+
+       .div-2 {
+               font-family: arial;
+               font-size: 18px;
+               font-weight: 800;
+               color: rgb(43, 43, 43);
+               margin-top: 45px;
+               padding-bottom: 10px;
+               display: flex;
+               justify-content: center;
+       }
+
+       .footer {
+                padding: 10px;
+                background-color: rgb(43, 43, 43);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                margin-top: 35px;
+            }
+
+        .f-p {
+                font-size: 15px;
+                font-family: arial;
+                font-weight: 450;
+                color: rgb(255, 255, 255);
+            }
+        .f-div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </div>
+</head>
+<body>
+    <nav class="nav">
+    <div class="navdiv">
+        <div class="logo"><a href="index.html">SHARKS</a></div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href='about.html'>About</a></li>
+
+            <li><a href='contact.html'>Contact</a></li>
+
+            <li><a href="bookverify.html">Booking</a></li>
+
+        </ul>
+
+        <div class="hamburger" id="hamburger">☰</div>
+    </div>
+
+</nav>
+
+    <div class="div-1">
+        <p class="p-1">
+            This is our Contact page you can find every information
+             here about How to Book Rides. You can also book your ride
+              from the Booking page in our Navigation bar but if you
+               are not comfomtable with that you can find every information
+                to contact us Below!.
+        </p>
+    </div>
+
+    <div class="div-2">
+        <ul>
+            <li>Help Line 5999</li>
+            <li>Email: sharkscontact43@gmail.com</li>
+            <li>Contact Number: +430175884546</li>
+            <li>Telagram: www.telegram/sharkscontact43.com</li>
+            <li>for World tour: sharksworldtour365@gmail.com</li>
+        </ul>
+    </div>
+    
+    <footer class="footer">
+        <div class="f-div">
+            <h3></h3>
+            <p class="f-p">Powered by Sharks the Edge of the Ocean.</p>
+        </div>
+    </footer>
+
+    <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+    });
+</script>
+
+</body>
+</html>

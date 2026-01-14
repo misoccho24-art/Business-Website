@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+
+    <div>
+        <style>
+            .p-1 {
+                font-family: arial;
+                font-size: 33px;
+                font-weight: 800;
+            }
+
+            .div-1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .input-1 {
+                padding: 15px;
+                width: 700px;
+            }
+
+            .div-2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .but-1 {
+                background-color: #2b86de;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                font-family: arial;
+                padding: 15px;
+                width: 700px;
+                border: none;
+                border-radius: 5px;
+                margin-top: 55px;
+                cursor: pointer;
+            }
+
+            .div-3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </div>
+
+    <div>
+        <style>
+            .p-2 {
+                font-family: arial;
+                font-size: 33px;
+                font-weight: 800;
+            }
+
+            .div-4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .input-2 {
+                padding: 15px;
+                width: 700px;
+            }
+
+            .div-5 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .but-2 {
+                background-color: #2b86de;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                font-family: arial;
+                padding: 15px;
+                width: 700px;
+                border: none;
+                border-radius: 5px;
+                margin-top: 55px;
+                cursor: pointer;
+            }
+
+            .div-6 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </div>
+</head>
+<body>
+    <div class="div-1">
+        <p class="p-1">Enter your Age. We need age verifiction for booking.</p>
+    </div>
+
+<form onsubmit="verifyAge(); return false;">
+    <div class="div-2">
+        <input class="input-1" type="text" placeholder="Enter your age" id="ageVeri">
+    </div>
+
+    <div class="div-3">
+    <button onclick="verifyAge();" class="but-1" id="buttonId">Next</button>
+    </div>
+</form>
+
+
+
+    <div class="div-4">
+        <p class="p-2">Enter your Contact Info Gmail/Phone</p>
+    </div>
+
+<form onsubmit="verifyCont(); return false;">    
+    <div class="div-5">
+        <input class="input-2" type="text" placeholder="Enter your Gmail/Phone" id="contVeri">
+    </div>
+
+    <div class="div-6">
+    <button onclick="verifyCont();" class="but-2" id="buttonId2">Confirm</button>
+    </div>
+</form>
+
+
+
+    <script>
+        function verifyAge() {
+
+        const button = document.getElementById("ageVeri");
+        const age = document.getElementById("ageVeri");
+
+        const ageNum = Number(age.value);
+
+        if (ageNum >= 18) {
+            document.getElementById("contVeri").focus();
+        }
+
+        else {
+            alert('Your age has not matched our minimum age requirement sorry.');
+        }
+    }
+
+    function verifyCont() {
+
+        const cont = document.getElementById("contVeri").value;
+
+        if (cont.length <= 7 ) {
+            alert("Your Input is too Short!.");
+        }
+
+        else if (cont.length > 34) {
+            alert("Your input is too long!.");
+        }
+
+        else if (cont.includes("@")) {
+            window.location.href = 'booking.html';
+        }
+
+        else {
+            alert("Invalid Contact info!.");
+        }
+    }
+
+    </script>
+</body>
+</html>

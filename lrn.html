@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More</title>
+
+    <div>
+        <style>
+            * {
+            text-decoration: none;
+            margin: 0px;
+        }
+
+        /* NAVBAR BASE */
+        .nav {
+            background-color: rgb(43, 43, 43);
+            font-family: arial;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin: 0px;
+        }
+
+        /* FLEX CONTAINER */
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* LOGO */
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* NAV LINKS */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            z-index: 9999;
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* HAMBURGER (MOBILE ONLY) */
+        .hamburger {
+            display: none;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            /* Nav links hidden */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                right: 20px;
+                top: 80px;
+                background: black;
+                padding: 15px;
+                border-radius: 8px;
+                width: 150px;
+                z-index: 9999;
+            }
+
+            /* Show when toggled */
+            .nav-links.open {
+                display: flex;
+            }
+
+            /* Show hamburger */
+            .hamburger {
+                display: block;
+            }
+        }
+        </style>
+    </div>
+
+    <div>
+        <style>
+            .p-1 {
+            font-size: 50px;
+            font-family: arial;
+            position: relative;
+            max-width: 950px;
+            font-weight: 450;
+            color: rgb(43, 43, 43);
+       }
+
+       .div-1 {
+               font-size: 33px;
+               margin-top: 0px;
+               padding-bottom: 25px;
+               display: flex;
+               justify-content: center;
+               margin-left: 0px;
+                    align-items: center;
+                    display: inline-block;
+                    margin-left: 0px;
+                    font-family: arial;
+                    font-weight: 600;
+                    font-size: 50px;
+                    color: rgb(43, 43, 43);
+                    display: flex;
+                    margin-bottom: 75px;
+       }
+
+       .divN {
+        align-items: center;
+        display: inline-block;
+        margin-left: 0px;
+        font-family: arial;
+        font-weight: 600;
+        font-size: 50px;
+        color: rgb(43, 43, 43);
+        display: flex;
+
+               font-size: 33px;
+               margin-top: 0px;
+               padding-bottom: 50px;
+               display: flex;
+               justify-content: center;
+               margin-left: 0px;
+       }
+    
+       li {
+        margin-bottom: 10px;
+       }
+
+       .p-11 {
+        font-family: arial;
+        font-size: 43px;
+        font-weight: 500;
+        max-width: 1300px;
+        margin-top: 50px;
+        margin-bottom: 85px;
+       }
+
+       .div11 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+
+       .footer {
+        padding: 10px;
+        background-color: rgb(43, 43, 43);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+       }
+
+       .f-p {
+        font-size: 15px;
+        font-family: arial;
+        font-weight: 450;
+        color: rgb(255, 255, 255);
+       }
+       .f-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+       .div-12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+       .p-12 {
+        font-family: arial;
+        font-size: 43px;
+        font-weight: 500;
+        max-width: 1300px;
+        margin-bottom: 50px;
+      }
+        </style>
+    </div>
+</head>
+<body>
+    
+    <nav class="nav">
+    <div class="navdiv">
+        <div class="logo"><a href="index.html">SHARKS</a></div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href='about.html'>About</a></li>
+
+            <li><a href='contact.html'>Contact</a></li>
+
+            <li><a href="booking.html">Booking</a></li>
+
+        </ul>
+
+        <div class="hamburger" id="hamburger">☰</div>
+    </div>
+</nav>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+    });
+</script>
+
+    <div class="div11">
+        <p class="p-11">This is where our Cruises are available across the Globe.
+                        Our Cruises are available in 100+ diffrent Country's we 
+                        mentioned 10 of them below. For the other 90+ 
+                        you can messege us in 5999 for an instant AI reply.
+        </p>
+    </div>
+
+    <div class="div-1">
+            <ul>
+                <li>Goarge Port atlanta America</li>
+                <li>Port 45 Italy</li>
+                <li>Port Sandy Saudi Arabia</li>
+                <li>Port Sealines America</li>
+                <li>Port Cox's Bangladesh</li>
+                <li>Port High Indonasia</li>
+                <li>Port  Bluerides America</li>
+                <li>Port Deep Sea Sweden</li>
+                <li>Port Joy Bangla Bangladesh</li>
+                <li>Port WaterPlanes America.</li>
+            </ul>
+    </div>
+
+    <div class="div-12">
+        <p class="p-12">
+            Our Achivements over 19 years of service.
+        </p>
+    </div>
+
+    <div class="divN">
+        <ul class="ul">
+            <li>70000+ Hours in Water</li>
+            <li>5000+ Active Cruises available across the world</li>
+            <li>200M+ Tickets sold in 19 years</li>
+            <li>9k+ Capacity in a single Cruise</li>
+            <li>7 Story Cruises</li>
+            <li>3000+ Rooms in a single Cruise</li>
+            <li>7500KM+ in 5 days</li>
+            <li>70000+ Horse Power Double Engine</li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <div class="f-div">
+            <h3></h3>
+            <p class="f-p">Powered by Sharks the Edge of the Ocean.</p>
+        </div>
+    </footer>
+</body>
+</html>
